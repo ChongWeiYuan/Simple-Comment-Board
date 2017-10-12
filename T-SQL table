@@ -1,0 +1,8 @@
+CREATE TABLE [dbo].[COMMENTBOARD] (
+    [Comment_ID]  INT            IDENTITY (1, 1) NOT NULL,
+    [User_Name]   NVARCHAR (50)  NULL,
+    [Message]     NVARCHAR (MAX) NULL,
+    [Posted_Date] DATETIME       NULL,
+    [End_Date]    DATETIME       NULL,
+    PRIMARY KEY CLUSTERED ([Comment_ID] ASC)
+);
