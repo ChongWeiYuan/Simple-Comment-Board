@@ -13,7 +13,7 @@ namespace CommentBoardRefine.Models
             {
             string InsertQuery= "SELECT COMMENT_ID, USER_NAME,MESSAGE,POSTED_DATE,END_DATE FROM COMMENTBOARD "                                                   
                           +"WHERE 1=1 "
-                          +"  AND CONVERT(DATE, END_DATE) >= CONVERT(DATE, GETDATE()) "                          
+                          +"AND CONVERT(DATE, END_DATE) >= CONVERT(DATE, GETDATE()) "                          
                           +"ORDER BY POSTED_DATE DESC";
 
             DataTable GetDatatable = SQL.GetDB(InsertQuery);
