@@ -4,4 +4,5 @@ RivetだとMVVMが楽でいいですね。  
   
 利用したサーバーはSQL SERVERです  
   
-ボタンレイアウトは、https://msdn.microsoft.com/ja-jp/library/bb613545(v=vs.110).aspx　を参考に作成
+ボタンレイアウトは、下記参照しました  
+https://msdn.microsoft.com/ja-jp/library/bb613545(v=vs.110).aspx
