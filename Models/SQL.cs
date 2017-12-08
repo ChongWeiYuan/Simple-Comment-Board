@@ -7,7 +7,8 @@ namespace CommentBoardRefine.Models
 {
     class SQL
     {
-        private static string SqlConnectionString = @"Data Source=(localdb)\ProjectsV13;Initial Catalog=NagaoDB;Integrated Security=True";
+        //接続文字列
+        private static string SqlConnectionString =  //@"ConnectionString";
 
 
         public static DataTable GetDB(String Query)
@@ -44,7 +45,6 @@ namespace CommentBoardRefine.Models
             return datatable;
 
         }
-
 
     }
 }
