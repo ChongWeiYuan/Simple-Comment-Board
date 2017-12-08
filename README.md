@@ -6,5 +6,5 @@ SQLへのアクセスクラスに、接続文字列を追加すれば動作し�
   
 利用したサーバーはSQL SERVERです  
   
-ボタンレイアウトは、下記MSDNを参照しました  
+ボタンレイアウトは、下記MSDNを拝借しました  
 https://msdn.microsoft.com/ja-jp/library/bb613545(v=vs.110).aspx
