@@ -1,22 +1,19 @@
-﻿using System;
-
+using System;
 using Livet;
 using Livet.Commands;
 using Livet.Messaging;
 using Livet.Messaging.IO;
 using Livet.EventListeners;
 using Livet.Messaging.Windows;
-
 using CommentBoardRefine.Models;
 using System.Collections.ObjectModel;
 
-
 namespace CommentBoardRefine.ViewModels
-{
+{    
     public class MainWindowViewModel : ViewModel
     {
-        private ObservableCollection<Column> _BindingModel { get; set; }
-        
+        //RaisePropertyChangedイベントを通じて、ViewModelプロパティに格納されたモデルの変更情報を表示画面(View)に反映させる
+        private ObservableCollection<Column> _BindingModel { get; set; }        
         public ObservableCollection<Column> BindingModel
         {
             get { return _BindingModel; }
@@ -26,22 +23,18 @@ namespace CommentBoardRefine.ViewModels
         }
 
         private DateTime _UpdateTime;
-        public DateTime UpdateTime { get { return _UpdateTime; }
-            set { _UpdateTime = value;
-                RaisePropertyChanged("UpdateTime");
-            } }
-
-
-        public void Initialize()
-        {
+        public DateTime UpdateTime 
+        { 
+            get { return _UpdateTime; }
+            set { _UpdateTime = value; RaisePropertyChanged("UpdateTime");}
         }
 
+        public void Initialize(){　}
 
-    public    MainWindowViewModel()
+        public    MainWindowViewModel()
         {
             BindingModel = new BindingClass().BindModel;
-            UpdateTime = DateTime.Now;
-            
+            UpdateTime = DateTime.Now;            
         }
 
 
