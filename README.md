@@ -10,5 +10,6 @@ SQLへのアクセスクラスに、接続文字列を追加すれば動作し�
 2、SQLサーバーに「T-SQL table」に記載されたテーブルを作成し、接続文字列を取得  
 3、接続文字列をSQLアクセスクラスに配置  
   
+  
 ボタンレイアウトは、下記MSDNを拝借しました  
 https://msdn.microsoft.com/ja-jp/library/bb613545(v=vs.110).aspx
