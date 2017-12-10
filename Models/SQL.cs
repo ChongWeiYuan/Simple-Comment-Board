@@ -10,7 +10,6 @@ namespace CommentBoardRefine.Models
         //接続文字列
         private static string SqlConnectionString =  //@"ConnectionString";
 
-
         public static DataTable GetDB(String Query)
         {
             
@@ -33,7 +32,7 @@ namespace CommentBoardRefine.Models
             //データリーダにクエリ文収納
             SqlDataReader rd = cmd.ExecuteReader();
 
-            //【要検証】このインスタンスはいつまで持続するのか？
+            
             DataTable datatable = new DataTable();
 
             //データーテーブル型にクエリ結果を収納
