@@ -21,8 +21,7 @@ namespace CommentBoardRefine.Views
     {
         public MainWindow()
         {
-            InitializeComponent();
-            
+            InitializeComponent();            
         }
     }
 }
