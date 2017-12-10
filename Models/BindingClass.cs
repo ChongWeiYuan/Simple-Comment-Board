@@ -7,17 +7,21 @@ namespace CommentBoardRefine.Models
 {
   public  class BindingClass
     {
+        //DataGridにバインドさせるプロパティ
         public ObservableCollection<Column> BindModel { get; set; }
 
+        //起動時に実行されるコンストラクタ
          public   BindingClass()
-            {
-            string InsertQuery= "SELECT COMMENT_ID, USER_NAME,MESSAGE,POSTED_DATE,END_DATE FROM COMMENTBOARD "                                                   
+            {           
+            //DataGridに表示させるSQLクエリ           
+            string SelectQuery= "SELECT COMMENT_ID, USER_NAME,MESSAGE,POSTED_DATE,END_DATE FROM COMMENTBOARD "                                                   
                           +"WHERE 1=1 "
                           +"AND CONVERT(DATE, END_DATE) >= CONVERT(DATE, GETDATE()) "                          
                           +"ORDER BY POSTED_DATE DESC";
-
-            DataTable GetDatatable = SQL.GetDB(InsertQuery);
-
+            //クエリを実行し情報取得
+            DataTable GetDatatable = SQL.GetDB(SelectQuery);
+            
+           //オブジェクトに、取得したテーブル情報を格納
             BindModel = new ObservableCollection<Column>() { };
             
             for (int i = 0; i < GetDatatable.Rows.Count; i++)
@@ -30,8 +34,7 @@ namespace CommentBoardRefine.Models
                 cl.Posted_Date = (DateTime)GetDatatable.Rows[i].ItemArray[3];
                 cl.End_Date = (DateTime)GetDatatable.Rows[i].ItemArray[4];
 
-                BindModel.Add(cl);
-                                
+                BindModel.Add(cl);                                
             }  
         }
         
